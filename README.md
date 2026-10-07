@@ -9,11 +9,6 @@ The project grew from an investigation into a simple question: can every mount
 on a Linux host be discovered and assigned to its mount namespace? The answer
 is more complicated than reading `/proc/<pid>/mountinfo`.
 
-> [!WARNING]
-> This is a research prototype, not a production inventory tool. It changes
-> mount namespaces on a dedicated thread and performs an expensive brute-force
-> scan of mount IDs. Run it only on systems where that cost is acceptable.
-
 ## What it does
 
 For every mount namespace it can discover through `/proc`, the program:
